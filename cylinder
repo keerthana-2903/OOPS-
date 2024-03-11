@@ -1,0 +1,38 @@
+// we hv created a class called cylinder with some properties and behaviours
+//we created 2 objects in this class, we can create n number of objects for single class.
+
+class Cylinder{
+    public double radius;
+    public double height;
+
+    public double area(){
+        return 2*Math.PI*radius*height + 2*Math.PI*radius*radius;
+    }
+    public double circumference(){
+        return Math.PI*radius*radius*height;
+    }
+    public double volume(){
+        return area()*height;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        Cylinder c=new Cylinder();
+        Cylinder c2=new Cylinder();
+
+        c.radius=2.5;
+        c.height=3.2;
+
+        c2.radius=3.6;
+        c2.height=2.0;
+
+        System.out.println("Area of a cylinder "+ c.area());
+        System.out.println("Circumference of a cylinder "+ c.circumference());
+        System.out.println("Volume of a cylinder "+ c.volume());
+
+        System.out.println("Area of a cylinder2 "+ c2.area());
+        System.out.println("Circumference of a cylinder2 "+ c2.circumference());
+        System.out.println("Volume of a cylinder2 "+ c2.volume());
+
+    }
+}
