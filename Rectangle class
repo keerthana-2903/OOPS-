@@ -1,0 +1,24 @@
+class Rectangle{
+    public int length;
+    public int breadth;
+
+    public int area(){
+         return length*breadth;
+    }
+    public int perimeter(){
+        return 2*(length + breadth);
+    }
+    public boolean isSquare(){		// we can also write this method as 
+        return length==breadth;		   public boolean isSquare() if(length==breadth) return true; else return false;
+    }						                     but this is too long.
+}
+public class Main{
+    public static void main(String[] args){
+        Rectangle r=new Rectangle();
+        r.length=2;
+        r.breadth=2;
+        System.out.println(r.area());
+        System.out.println(r.perimeter());
+        System.out.println(r.isSquare());
+    }
+}
