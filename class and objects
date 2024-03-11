@@ -1,0 +1,10 @@
+class circle{
+    public int radius;
+
+    public int area(){			
+        return radius*radius;
+    }
+    public double circumferece(){
+        return 2*Math.PI*radius;
+    }
+}
