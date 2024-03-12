@@ -1,0 +1,50 @@
+class Account{
+    private int acc_no;
+    private double debit;
+    private double credit;
+    private double balance;
+
+    //getter methods
+    int getAcc_no(){
+        return acc_no;
+    }
+    double getDebit(){
+        return debit;
+    }
+    double getCredit(){
+        return credit;
+    }
+//    double getBalance(){
+//        return credit + debit;
+//    }
+    //setter methods
+    void setAcc_no(int a){
+        acc_no=a;
+    }
+    void setDebit(double d){
+        debit=d;
+    }
+    void setCredit(double c){
+        credit=c;
+    }
+
+//     void setBalance(double debit,double credit){
+//        balance=debit+credit;
+//    }
+    public double balance(){
+        return credit+debit;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        Account a=new Account();
+      //  a.credit=1095.86;          it will not access the values it shows error;
+      //to recover this we use getter and setter methods.
+        a.setCredit(64828.983);
+        a.setDebit(732786.86);
+//        a.setBalance(87462.98,7634524.90);
+
+        System.out.println("total balnce "+ a.balance());
+        System.out.println("credited amount "+ a.getCredit());
+    }
+}
