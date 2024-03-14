@@ -1,0 +1,89 @@
+class Product{
+    private int itemno;
+    private String name;
+    private double price;
+    private int qty;
+    public Product(int ino){
+        ino=itemno;
+    }
+    public Product(int ino,String n){
+        itemno=ino;
+        name=n;
+    }
+    public Product(int ino,String n,double p,int q){
+        itemno=ino;
+        name=n;
+        setPrice(p);
+        setQty(q);
+    }
+
+    public int getItemno(){
+        return itemno;
+    }
+    public String getName(){
+        return name;
+    }
+    public  double getPrice(){
+        return price;
+    }
+    public int getQty(){
+        return qty;
+    }
+    public void setPrice(double p){
+       price=p;
+    }
+    public void setQty(int q){
+        qty=q;
+    }
+}
+
+class Customer{
+    private int id;
+    private String name;
+    private String address;
+    private long phn;
+
+    public Customer(int Id,String Name){
+        id=Id;
+        name=Name;
+
+    }
+    public Customer(int Id,String Name,String Address,long Phn){
+        id=Id;
+        name=Name;
+        setAddress(Address);
+        setPhn(Phn);
+    }
+    public int getId(){
+        return id;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public long getPhn(){
+        return phn;
+    }
+    public void setAddress(String Address){
+        Address=address;
+    }
+    public void setPhn(long Phn){
+        Phn=phn;
+    }
+}
+
+public class Main {
+    public static void main(String[] args){
+        Product P=new Product(23,"sjahv");
+        Customer c=new Customer(20,"keerthana");
+//        P.setQty(7889);
+//        P.setPrice(8368.89);
+        System.out.println(c.getId());
+        System.out.println(c.getName());
+        System.out.println(P.getItemno());
+        System.out.println(P.getName());
+
+    }
+}
