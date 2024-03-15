@@ -1,0 +1,16 @@
+class Super{
+    public void display(){
+        System.out.println("hello");
+    }
+}
+class Sub extends Super{
+    public void display(){
+        System.out.println("hello welcome");
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        Super s=new Sub();
+        s.display();                 //this will print hello welcome which is in sub class
+    }
+}
