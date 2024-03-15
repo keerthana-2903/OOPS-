@@ -1,0 +1,36 @@
+class Tv{
+    public void switchON(){
+        System.out.println("Tv is switched on");
+    }
+    public void changeChannel(){
+        System.out.println("Tv channel is changed");
+    }
+}
+class SmartTv extends Tv{
+    @Override
+    public void switchON(){
+        System.out.println("Smarttv is switched on");
+    }
+    @Override                                  //annotation is to provide additional information to the compiler and JVM. if it is not given also code runs
+    public void changeChannel(){
+        System.out.println("Smarttv channel is changed");
+    }
+    public void browse(){
+        System.out.println("smart tv is ready to be browsed");
+    }
+}
+public class Main {
+    public static void main(String[] args){
+//        Tv t=new Tv();
+//        t.switchON();
+//        t.changeChannel();
+//        SmartTv tv=new SmartTv();  //when we called this then tv class will be overrided.
+//        tv.switchON();
+//        tv.changeChannel();
+//        tv.browse();
+
+         Tv t=new SmartTv();        //here reference is tv class and obj is smart tv class so for method is called based on obj only
+         t.switchON();              // we cant do this by making smart tv class as refernce and tv as obj.
+         t.changeChannel();
+    }
+}
