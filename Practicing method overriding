@@ -1,0 +1,43 @@
+class Car{
+    public void start(){
+        System.out.println("car is started");
+    }
+    public void accelerate(){
+        System.out.println("car is being accelerated");
+    }
+    public void changeGear(){
+        System.out.println("gear is changed");
+    }
+}
+class LuxuryCar extends Car{
+//    public void start(){
+//        System.out.println("Luxury car is started");
+//    }
+    public void accelerate(){
+        System.out.println("Luxury car is being accelerated");
+    }
+//    public void changeGear(){
+//        System.out.println("Luxury car gear is changed");
+//    }
+    public void openRoof(){
+        System.out.println("Luxury car open roof is opened");
+    }
+
+}
+public class Main {
+    public static void main(String[] args){
+//        LuxuryCar l=new LuxuryCar();
+//        l.accelerate();     //if we create obj for subclass and called the method accelerate which will print the things inside the subclass method bcoz super class is overrided
+        //but if we dont hv accelerate method inside the subclass and we clled accelerate method then it will print the things present in the super class
+
+
+//      Car c=new LuxuryCar();   //here we cant able to access openroof method becoz we use super class as reference and openroof method is not there.
+//      c.start();
+//      c.accelerate();
+//      c.changeGear();
+
+        //to access openroof method
+        LuxuryCar l=new LuxuryCar();
+        l.openRoof();
+    }
+}
