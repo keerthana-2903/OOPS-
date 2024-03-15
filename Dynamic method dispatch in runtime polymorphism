@@ -1,0 +1,28 @@
+class Super{
+    public void method1(){ System.out.println("spr method 1 is created");}
+    public void method2(){ System.out.println("spr method 2 is created");}
+}
+class Sub extends Super{
+    @Override
+    public void method2(){ System.out.println("sub method 2 is created");}
+    public void method3(){ System.out.println("sub method 3 is created");}
+}
+public class Main {
+    public static void main(String[] args){
+        //create obj for super class to access super clas methods
+//        Super s=new Super();
+//        s.method1();
+//        s.method2();
+
+       //crete obj for sub cls to access subcls methods
+//       Sub sb=new Sub();
+//       sb.method1();
+//       sb.method2();
+//       sb.method3();
+
+       //create dynamic method dispatch
+       Super su=new Sub();
+       su.method1();
+       su.method2();
+    }
+}
