@@ -1,0 +1,82 @@
+class Account{
+    private long accNo;
+    private String name;
+    private String address;
+    private long phnNo;
+    private String dob;
+    protected long balance;
+
+    public Account(long accNo,String name,String add,long phnNo, String Dob){
+        this.accNo=accNo;
+        this.name=name;
+        address=add;
+        this.phnNo=phnNo;
+        dob=Dob;
+        balance=0;
+    }
+ public long getAccNo() {
+        return accNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public long getPhnNo() {
+        return phnNo;
+    }
+
+    public void setAddress(String add) {
+       address = add;
+    }
+    public void setPhnNo(long phnNo){
+        this.phnNo=phnNo;
+    }
+}
+class SavingsAccount extends Account{
+//    public SavingsAccount(long accNo, String name, String add, long phnNo, String Dob) {
+//        super(accNo, name, add, phnNo, Dob);
+//    }
+
+    public void deposit(long amt){
+        balance+=amt;
+    }
+    public long withdraw(long amt){
+         balance-=amt;
+         return amt;
+    }
+}
+class LoanAccount extends Account{
+//    public LoanAccount(long accNo, String name, String add, long phnNo, String Dob) {
+//        super(accNo, name, add, phnNo, Dob);
+//    }
+
+    public void payEMI(long amt){
+        balance-=amt;
+ }
+    public void repay(long amt){
+        if(balance==amt){
+            balance=0;
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Account a=new Account(1289647,"keer","5/698,jjbs ajdj",869439864,"45-97-90");
+        SavingsAccount s=new SavingsAccount(90637,"keer","647,jgj",8789,"6-09-90");
+//        a.setAddress("3/689 , ukp nagar, gandhi nagar, udumalpet");
+        a.setPhnNo(784504093);
+        a.balance=894096;
+        System.out.println(a.balance);
+        System.out.println(a.getAddress());
+        System.out.println(s.withdraw(8976));
+    }
+}
