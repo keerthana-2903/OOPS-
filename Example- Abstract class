@@ -1,0 +1,33 @@
+abstract class Hospital{
+    abstract void emergency();
+    abstract void admit();
+    abstract void appointment();
+    abstract void billing();
+}
+class MyHospital extends Hospital{
+    @Override
+    public void emergency(){
+        System.out.println("patient is in emergency");
+    }
+    @Override
+    public void admit(){
+        System.out.println("patient admitted");
+    }
+    @Override
+    public void appointment(){
+        System.out.println("patient has appointment");
+    }
+    @Override
+    public void billing(){
+        System.out.println("patient bill is ready");
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        Hospital h=new MyHospital();
+        h.emergency();
+        h.admit();
+        h.appointment();
+        h.billing();
+    }
+}
