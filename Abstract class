@@ -1,0 +1,21 @@
+abstract class Test{
+    Test(){ System.out.println("constructor");}
+    public void method1(){
+        System.out.println("method1");
+    }
+    abstract public void method2();
+}
+class Test2 extends Test{
+    public void method2(){
+        System.out.println("method2");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Test t=new Test2();  //abstract methods and abs cls cant be called but make them as reference is possible , by making abs cls as 
+        // refernce and creting obj for subcls and the sub cls is called bcoz it is concrete cls by making the sup cls methods overrided. 
+        //otherwise it cant be called and executed.
+        t.method1();
+        t.method2();
+    }
+}
