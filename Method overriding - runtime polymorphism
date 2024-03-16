@@ -1,0 +1,21 @@
+class Super{
+    public void display(){
+        System.out.println("Super class dsiplay");
+    }
+}
+class Sub extends Super{
+    @Override
+    public void display(){
+        System.out.println("Sub class display");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Super s=new Super();
+        s.display();             //it will call and print super cls
+        Sub su=new Sub();
+        su.display();          //it will override super cls and print sub cls
+        Super sp=new Sub();
+        sp.display();          //it will call sub cls based on obj
+    }
+}
