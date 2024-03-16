@@ -1,0 +1,19 @@
+class Test{
+    public int display(int a,int b){
+//        System.out.println(a>b ? a:b);
+        return a>b ? a:b;
+    }
+    public int display(int a,int b,int c){
+        if(a>b && a>c) return a;
+        else if (b>c) return b;
+        return c;
+    }
+}
+public class Main {
+    public static void main(String[] args){
+        Test t=new Test();
+
+        System.out.println(t.display(5,3,8));
+        System.out.println(t.display(9,6));
+    }
+}
