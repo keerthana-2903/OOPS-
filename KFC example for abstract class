@@ -1,0 +1,34 @@
+abstract class KFC{
+    KFC(){
+        System.out.println("constructor");
+    }
+    abstract void billing();
+    abstract void offer();
+}
+class MyKFC extends KFC{
+    @Override
+    public void billing(){
+        System.out.println("bill");
+    }
+    public void billing2(){
+        System.out.println("bill2");
+    }
+    @Override
+    public void offer(){
+        System.out.println("offered");
+    }
+}
+public class Main {
+    public static void main(String[] args){
+//        KFC k=new MyKFC();   // this will acquire super and sub cls properties but not the methods which is not present in super class
+//        k.billing();
+//        k.offer();
+//        MyKFC m=new MyKFC(); //to acquire the sub class methods we hv to create obj for sub cls methods
+//        m.billing2();
+        //otherwise we use to create obj for sub cls bcoz we override all the methods present inside the super cls
+        MyKFC f=new MyKFC();
+        f.offer();
+        f.billing2();
+        f.billing();
+    }
+}
