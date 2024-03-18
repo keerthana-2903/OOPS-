@@ -1,0 +1,27 @@
+class Coffee{
+    private float coffeeQty;
+    private float waterQty;
+    static private Coffee refernce=null;
+    private Coffee(){  //const made as private then obj will not be able to create
+        //for that we hv to create some other method.
+        coffeeQty=1;
+        waterQty=1;
+    }
+    //calling other method without creating obj use static
+    static public Coffee getInstance(){ //this method will create instance and return instance it is belongs to class coffee so it can call private const. but dont want to
+                                           //always create a new instance and return for that we have one property and should be
+                                           //static and private and that is not directly accessible.
+        if(refernce==null){
+            refernce=new Coffee();
+        }
+            return refernce;
+
+    }
+
+}
+public class Main {
+    public static void main(String[] args){
+        Coffee c=Coffee.getInstance();
+        System.out.println("same");
+    }
+}
