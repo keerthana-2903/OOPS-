@@ -1,0 +1,16 @@
+
+public class Main{
+    static{
+        System.out.println("block");
+    }
+    static {
+        System.out.println("block 1");
+    }
+    public static void main(String[] args){
+        System.out.println("main"); //this will execute after execution of all static blocks
+
+    }
+    static{
+        System.out.println("block 2");
+    }
+}
