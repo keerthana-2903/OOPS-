@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int a[]={30,20,10,40,0};
+        try{
+            int c=a[0]/a[2]; //if here any exception present then it will go to catch and execute
+                            // other statements doesnot executed
+            System.out.println("division is "+c);
+
+            System.out.println(a[8]); //if there is no exception before thi stmt then only it
+                                     // handled otherwise it will not executed
+        }
+        catch (ArithmeticException e){
+            System.out.println("denominator should not be 0");
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Index is invalid");
+        }
+        System.out.println("Bye");
+    }
+}
